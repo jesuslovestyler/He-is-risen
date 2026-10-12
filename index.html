@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="A gentle, historically grounded invitation to consider the evidence for the resurrection of Jesus." />
+  <link rel="icon" href="data:," />
+  <title>He Is Risen — A Case Worth Considering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --sky: #f5f7f2;
+      --sky-warm: #fff8ed;
+      --paper: #ffffff;
+      --ink: #162b2e;
+      --body: #314649;
+      --muted: #657679;
+      --line: #d8dfdc;
+      --line-strong: #b5c4bf;
+      --sun: #d26838;
+      --sun-deep: #a44424;
+      --sun-soft: #f8dfcf;
+      --sea: #164f55;
+      --sea-soft: #e2efed;
+      --stone: #d9d0c1;
+      --cave: #193337;
+      --note: #f1f5f2;
+      --footer: #122b2f;
+      --footer-ink: #edf6f2;
+      --shadow: 0 28px 80px rgba(31, 55, 53, .10);
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --sky: #0d191b;
+        --sky-warm: #172120;
+        --paper: #132528;
+        --ink: #f2f6f2;
+        --body: #cdd9d7;
+        --muted: #93aaa7;
+        --line: #294044;
+        --line-strong: #456065;
+        --sun: #ed8b59;
+        --sun-deep: #ffae79;
+        --sun-soft: #3b2d28;
+        --sea: #83c5c2;
+        --sea-soft: #173739;
+        --stone: #6d675e;
+        --cave: #061112;
+        --note: #192e31;
+        --footer: #071517;
+        --footer-ink: #e9f4f0;
+        --shadow: 0 28px 80px rgba(0, 0, 0, .28);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--sky);
+      color: var(--body);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; }
+    img, svg { display: block; max-width: 100%; }
+    h1, h2, h3, blockquote { font-family: var(--serif); color: var(--ink); }
+
+    .hero {
+      min-height: min(900px, 96svh);
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, .85fr);
+      align-items: center;
+      gap: clamp(48px, 8vw, 120px);
+      width: min(1220px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: clamp(70px, 10vw, 140px) 0 90px;
+    }
+    .hero-copy { max-width: 710px; }
+    .opening {
+      margin: 0 0 24px;
+      color: var(--sun-deep);
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(4rem, 9.5vw, 8.8rem);
+      font-weight: 500;
+      letter-spacing: -.055em;
+      line-height: .83;
+    }
+    .hero-lede {
+      max-width: 650px;
+      margin: 34px 0 0;
+      font-family: var(--serif);
+      color: var(--ink);
+      font-size: clamp(1.35rem, 2.2vw, 1.95rem);
+      line-height: 1.35;
+    }
+    .hero-note {
+      max-width: 610px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: .98rem;
+    }
+    .begin {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 34px;
+      color: var(--sea);
+      font-size: .92rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .begin::after { content: "↓"; font-size: 1.15rem; }
+
+    .dawn-art {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      width: min(100%, 480px);
+      justify-self: center;
+      overflow: hidden;
+      border-radius: 240px 240px 12px 12px;
+      background: linear-gradient(180deg, #9dc4c2 0%, #e8c5a3 52%, #e98a55 76%, #82462f 100%);
+      box-shadow: var(--shadow);
+      isolation: isolate;
+    }
+    .sun {
+      position: absolute;
+      width: 42%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      top: 23%;
+      left: 29%;
+      background: #fff3c9;
+      box-shadow: 0 0 70px rgba(255, 235, 180, .7);
+      z-index: -1;
+    }
+    .ridge-back,
+    .ridge-front {
+      position: absolute;
+      left: -8%; right: -8%; bottom: 0;
+      background: #4a6258;
+      clip-path: polygon(0 38%, 15% 25%, 31% 34%, 44% 12%, 57% 28%, 70% 20%, 84% 38%, 100% 26%, 100% 100%, 0 100%);
+    }
+    .ridge-back { height: 48%; opacity: .62; }
+    .ridge-front {
+      height: 37%;
+      background: #263c38;
+      clip-path: polygon(0 41%, 20% 15%, 36% 31%, 49% 8%, 70% 26%, 83% 14%, 100% 39%, 100% 100%, 0 100%);
+    }
+    .tomb {
+      position: absolute;
+      width: 48%;
+      height: 32%;
+      right: 9%;
+      bottom: 14%;
+      border-radius: 52% 52% 4px 4px / 66% 66% 4px 4px;
+      background: #b6aa97;
+      box-shadow: inset 12px 10px 0 rgba(255,255,255,.14);
+    }
+    .opening-shape {
+      position: absolute;
+      width: 44%;
+      height: 72%;
+      left: 15%;
+      bottom: 0;
+      border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+      background: #142726;
+    }
+    .stone {
+      position: absolute;
+      width: 24%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      right: -7%;
+      bottom: -3%;
+      background: #cabda8;
+      box-shadow: inset -8px -8px 0 rgba(80,60,42,.12);
+    }
+    .path {
+      position: absolute;
+      width: 74%;
+      height: 24%;
+      bottom: -4%;
+      left: 2%;
+      background: #ac7659;
+      transform: skewX(-18deg) rotate(-6deg);
+      opacity: .8;
+    }
+    .dawn-caption {
+      position: absolute;
+      left: 18%;
+      right: 18%;
+      top: 9%;
+      margin: 0;
+      color: #173437;
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      line-height: 1.24;
+      text-align: center;
+    }
+
+    .case-wrap {
+      width: min(1220px, calc(100% - 48px));
+      margin: 0 auto 100px;
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: clamp(42px, 7vw, 96px);
+      align-items: start;
+    }
+    .case-index {
+      position: sticky;
+      top: 24px;
+      padding-top: 12px;
+    }
+    .case-index p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+    .case-index nav { display: grid; }
+    .case-index a {
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .88rem;
+      text-decoration: none;
+      transition: color .2s ease, padding-left .2s ease;
+    }
+    .case-index a:hover,
+    .case-index a:focus-visible { color: var(--sun-deep); padding-left: 5px; }
+
+    .case { background: var(--paper); border-top: 5px solid var(--sun); box-shadow: var(--shadow); }
+    .invitation {
+      padding: clamp(48px, 7vw, 88px);
+      border-bottom: 1px solid var(--line);
+    }
+    .invitation h2 {
+      margin: 0;
+      font-size: clamp(2.7rem, 6vw, 5.9rem);
+      font-weight: 500;
+      line-height: .95;
+      letter-spacing: -.04em;
+    }
+    .invitation p { max-width: 700px; margin: 26px 0 0; font-size: 1.08rem; }
+    .honesty {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr);
+      gap: 26px;
+      margin-top: 38px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+    .honesty strong { color: var(--sun-deep); font-size: .9rem; }
+    .honesty p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+    .fact {
+      display: grid;
+      grid-template-columns: 94px minmax(0, 1fr);
+      gap: clamp(24px, 5vw, 58px);
+      padding: clamp(54px, 7vw, 90px);
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 22px;
+    }
+    .fact:last-of-type { border-bottom: 0; }
+    .fact-number {
+      font-family: var(--serif);
+      color: var(--sun);
+      font-size: 4.2rem;
+      line-height: 1;
+      font-variant-numeric: lining-nums;
+    }
+    .fact-body { max-width: 780px; }
+    .fact h2 {
+      margin: 0;
+      font-size: clamp(2.35rem, 4.8vw, 4.7rem);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: -.035em;
+    }
+    .claim {
+      margin: 25px 0 0;
+      color: var(--ink);
+      font-size: 1.08rem;
+    }
+    .fact p { max-width: 730px; }
+    .evidence-line {
+      margin: 32px 0 0;
+      padding: 23px 26px;
+      background: var(--note);
+      border-top: 1px solid var(--line-strong);
+      color: var(--body);
+      font-size: .94rem;
+    }
+    .evidence-line strong { color: var(--ink); }
+    blockquote {
+      margin: 34px 0 0;
+      padding: 0 0 0 26px;
+      border-left: 3px solid var(--sun);
+      font-size: clamp(1.35rem, 2.6vw, 1.85rem);
+      line-height: 1.42;
+    }
+    cite {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: .79rem;
+      font-style: normal;
+      font-weight: 700;
+    }
+    .balance {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .creed {
+      margin-top: 34px;
+      padding: 28px 30px 30px;
+      background: var(--sea-soft);
+    }
+    .creed p { margin: 0; font-family: var(--serif); color: var(--ink); font-size: 1.24rem; line-height: 1.55; }
+    .creed cite { margin-top: 15px; }
+
+    .question {
+      width: min(980px, calc(100% - 48px));
+      margin: 0 auto 110px;
+      padding: clamp(48px, 8vw, 92px);
+      border: 1px solid var(--line);
+      background: var(--sun-soft);
+    }
+    .question h2 {
+      margin: 0;
+      max-width: 700px;
+      font-size: clamp(2.6rem, 6vw, 5.8rem);
+      font-weight: 500;
+      line-height: .97;
+      letter-spacing: -.04em;
+    }
+    .question > p { max-width: 760px; margin: 28px 0 0; font-size: 1.08rem; }
+    .questions { margin-top: 38px; border-top: 1px solid var(--line-strong); }
+    details { border-bottom: 1px solid var(--line-strong); }
+    summary {
+      padding: 20px 44px 20px 0;
+      position: relative;
+      cursor: pointer;
+      color: var(--ink);
+      font-weight: 700;
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 2px;
+      top: 16px;
+      color: var(--sun-deep);
+      font-family: var(--serif);
+      font-size: 1.7rem;
+      font-weight: 400;
+    }
+    details[open] summary::after { content: "−"; }
+    details p { margin: -4px 0 22px; max-width: 720px; }
+
+    .closing {
+      background: var(--footer);
+      color: var(--footer-ink);
+    }
+    .closing-inner {
+      width: min(980px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: clamp(78px, 11vw, 140px) 0;
+    }
+    .closing h2 {
+      margin: 0;
+      color: var(--footer-ink);
+      font-size: clamp(3rem, 7vw, 7rem);
+      font-weight: 500;
+      line-height: .92;
+      letter-spacing: -.045em;
+    }
+    .closing p { max-width: 720px; margin: 28px 0 0; color: #c8d9d5; font-size: 1.08rem; }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      margin-top: 34px;
+      padding: 14px 22px;
+      background: var(--sun);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s ease;
+    }
+    .cta:hover,
+    .cta:focus-visible { background: #e17a48; }
+    .scripture {
+      margin-top: 58px !important;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.2);
+      color: var(--footer-ink) !important;
+      font-family: var(--serif);
+      font-size: clamp(1.35rem, 2.8vw, 2rem) !important;
+    }
+    .scripture span { display: block; margin-top: 12px; color: #9fb7b2; font-family: var(--sans); font-size: .78rem; font-weight: 700; }
+
+    .sources {
+      width: min(980px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 58px 0 74px;
+    }
+    .sources h2 { margin: 0; font-size: 1.75rem; font-weight: 500; }
+    .sources p { max-width: 740px; margin: 12px 0 22px; color: var(--muted); font-size: .9rem; }
+    .sources ul { margin: 0; padding: 0; display: grid; gap: 12px; list-style: none; }
+    .sources a { color: var(--sea); font-size: .9rem; text-underline-offset: 4px; }
+    .translation { margin-top: 30px !important; padding-top: 22px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 900px) {
+      .hero { min-height: auto; grid-template-columns: 1fr; padding-top: 78px; }
+      .hero-copy { max-width: 760px; }
+      .dawn-art { width: min(76vw, 430px); justify-self: start; }
+      .case-wrap { grid-template-columns: 1fr; }
+      .case-index { position: static; }
+      .case-index nav { grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid var(--line); }
+      .case-index a { min-width: 0; padding: 12px 5px; text-align: center; border-top: 1px solid var(--line); font-size: 0; }
+      .case-index a::first-letter { font-size: .9rem; }
+      .case-index a:hover, .case-index a:focus-visible { padding-left: 5px; }
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .hero,
+      .case-wrap,
+      .question,
+      .closing-inner,
+      .sources { width: min(100% - 30px, 100%); }
+      .hero { gap: 48px; padding: 64px 0 64px; }
+      h1 { font-size: clamp(4rem, 21vw, 6.4rem); }
+      .hero-lede { margin-top: 26px; }
+      .dawn-art { width: 100%; max-width: 420px; }
+      .case-wrap { margin-bottom: 74px; gap: 28px; }
+      .case-index p { margin-left: 2px; }
+      .invitation { padding: 44px 24px; }
+      .honesty { grid-template-columns: 1fr; gap: 8px; }
+      .fact { grid-template-columns: 1fr; gap: 16px; padding: 48px 24px; }
+      .fact-number { font-size: 2.5rem; }
+      .evidence-line { padding: 20px; }
+      blockquote { padding-left: 20px; }
+      .creed { padding: 23px 21px; }
+      .question { padding: 46px 24px; margin-bottom: 74px; }
+      .closing-inner { padding: 78px 0; }
+      .cta { width: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="opening">A case worth considering</p>
+        <h1 id="page-title">He Is<br />Risen</h1>
+        <p class="hero-lede">Christian faith rests on a public claim: Jesus of Nazareth was crucified, buried, and seen alive again.</p>
+        <p class="hero-note">You do not have to pretend certainty, silence hard questions, or be pressured into belief. You are invited to look at the evidence and ask what best explains it.</p>
+        <a class="begin" href="#the-case">Follow the case</a>
+      </div>
+
+      <div class="dawn-art" role="img" aria-label="Illustration of dawn breaking over an open rock tomb">
+        <div class="sun"></div>
+        <div class="ridge-back"></div>
+        <div class="ridge-front"></div>
+        <div class="path"></div>
+        <div class="tomb"><div class="opening-shape"></div><div class="stone"></div></div>
+        <p class="dawn-caption">“He is not here, for he has risen.”<br /><small>Matthew 28:6</small></p>
+      </div>
+    </section>
+
+    <div class="case-wrap" id="the-case">
+      <aside class="case-index" aria-label="The five points of the case">
+        <p>The case, in five parts</p>
+        <nav>
+          <a href="#death">01 &nbsp; The crucifixion</a>
+          <a href="#tomb">02 &nbsp; The empty tomb</a>
+          <a href="#witnesses">03 &nbsp; Transformed witnesses</a>
+          <a href="#creed">04 &nbsp; The early creed</a>
+          <a href="#skeptics">05 &nbsp; James and Paul</a>
+        </nav>
+      </aside>
+
+      <article class="case">
+        <header class="invitation">
+          <h2>Start with what can be known.</h2>
+          <p>History cannot place a miracle in a laboratory. It can ask what happened, how early the reports are, whether witnesses were named, and which explanation accounts for the evidence with the least strain.</p>
+          <div class="honesty">
+            <strong>A fair approach</strong>
+            <p>None of the points below forces faith on its own. Together they form a cumulative case. The final question is not whether every detail is easy, but which explanation makes the best sense of the whole.</p>
+          </div>
+        </header>
+
+        <section class="fact" id="death">
+          <div class="fact-number" aria-hidden="true">01</div>
+          <div class="fact-body">
+            <h2>Jesus died by crucifixion.</h2>
+            <p class="claim">This is the common ground. Christian, Jewish, agnostic, and skeptical historians overwhelmingly accept that Jesus was executed under Pontius Pilate.</p>
+            <p>The claim is supported by early Christian testimony and by non-Christian sources, including the Roman historian Tacitus. Roman crucifixion was designed to kill; the resurrection claim begins after a real death, not a narrow escape.</p>
+            <div class="evidence-line"><strong>What this establishes:</strong> the event needing explanation is not recovery from injury. Jesus was dead, and his followers knew it.</div>
+            <blockquote>
+              “Pilate, wishing to please the multitude, released Barabbas to them, and handed over Jesus, when he had flogged him, to be crucified.”
+              <cite>Mark 15:15 · World English Bible</cite>
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="fact" id="tomb">
+          <div class="fact-number" aria-hidden="true">02</div>
+          <div class="fact-body">
+            <h2>The tomb was found empty.</h2>
+            <p class="claim">All four Gospel accounts place women—Mary Magdalene in every account—at the discovery of the empty tomb.</p>
+            <p>That detail matters. In the first-century world, women were not the witnesses an inventor would be most likely to choose when trying to make a public claim sound impressive. The accounts preserve the awkward detail rather than replacing it with a more socially persuasive one.</p>
+            <div class="evidence-line"><strong>What this establishes:</strong> the earliest Christian proclamation concerned a missing body and an opened tomb. <strong>What it does not establish by itself:</strong> why the tomb was empty.</div>
+            <blockquote>
+              “Why do you seek the living among the dead? He isn’t here, but is risen.”
+              <cite>Luke 24:5–6 · World English Bible</cite>
+            </blockquote>
+            <p class="balance">The Gospel accounts differ in some secondary details, and scholars debate how to harmonize them. Their shared center remains: women went to the tomb, the body was not there, and resurrection was announced.</p>
+          </div>
+        </section>
+
+        <section class="fact" id="witnesses">
+          <div class="fact-number" aria-hidden="true">03</div>
+          <div class="fact-body">
+            <h2>Fear gave way to witness.</h2>
+            <p class="claim">At Jesus’s arrest, the disciples scattered. Soon afterward, those same people were publicly proclaiming that they had seen him alive.</p>
+            <p>Their courage did not make their claim true by itself. Sincere people can be mistaken. But their willingness to suffer for their testimony weighs against the idea that they knowingly invented it.</p>
+            <div class="evidence-line"><strong>A careful claim:</strong> the evidence for every traditional apostolic martyrdom is not equally strong. Peter, Paul, and James the son of Zebedee have substantial early attestation; the wider point is that the first witnesses accepted real danger rather than quietly abandoning what they said they had seen.</div>
+            <blockquote>
+              “We can’t help telling the things which we saw and heard.”
+              <cite>Acts 4:20 · World English Bible</cite>
+            </blockquote>
+          </div>
+        </section>
+
+        <section class="fact" id="creed">
+          <div class="fact-number" aria-hidden="true">04</div>
+          <div class="fact-body">
+            <h2>The message is remarkably early.</h2>
+            <p class="claim">First Corinthians was written in the middle of the first century. In chapter 15, Paul passes on a structured tradition he says he had already “received.”</p>
+            <p>Many scholars date this resurrection summary to within a few years of Jesus’s death. That places the central claim near the event itself, while named witnesses were still alive—not generations later, after everyone who could answer it was gone.</p>
+            <div class="creed">
+              <p>“Christ died for our sins according to the Scriptures; … he was buried; … he was raised on the third day according to the Scriptures; and … he appeared to Cephas, then to the twelve; then he appeared to over five hundred brothers at once, most of whom remain until now…”</p>
+              <cite>1 Corinthians 15:3–6 · World English Bible</cite>
+            </div>
+            <div class="evidence-line"><strong>Why it matters:</strong> belief in the resurrection was not a legend added to Christianity later. It was at the center from the beginning.</div>
+          </div>
+        </section>
+
+        <section class="fact" id="skeptics">
+          <div class="fact-number" aria-hidden="true">05</div>
+          <div class="fact-body">
+            <h2>Unlikely people became convinced.</h2>
+            <p class="claim">James, Jesus’s brother, had not believed during Jesus’s ministry. Paul actively opposed the church. Both later became leaders who said the risen Jesus had appeared to them.</p>
+            <p>Neither man was primed to agree. James moved from family skepticism to leadership in Jerusalem. Paul moved from persecutor to apostle, carrying the message at enormous personal cost.</p>
+            <div class="evidence-line"><strong>The question they raise:</strong> what changed them? Their own answer was not an idea, a mood, or secondhand enthusiasm. They said they had encountered Jesus alive.</div>
+            <blockquote>
+              “Then he appeared to James, then to all the apostles, and last of all … he appeared to me also.”
+              <cite>1 Corinthians 15:7–8 · World English Bible</cite>
+            </blockquote>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <section class="question" aria-labelledby="best-explanation">
+      <h2 id="best-explanation">What best explains all five?</h2>
+      <p>A crucified man. An empty tomb. Frightened followers transformed into public witnesses. A resurrection message present from the movement’s first years. Former skeptics changed into believers.</p>
+      <div class="questions">
+        <details>
+          <summary>Could the disciples have invented it?</summary>
+          <p>That does not easily explain their willingness to accept danger for a claim they would have known was false, the unflattering role of women as first discoverers, or the conversions of James and Paul.</p>
+        </details>
+        <details>
+          <summary>Could they have been sincere but mistaken?</summary>
+          <p>Sincerity alone is not proof. Yet a mistaken-impression theory must account for individual and group appearance claims, the empty tomb tradition, the variety of witnesses, and the rapid, bodily-resurrection message.</p>
+        </details>
+        <details>
+          <summary>Does history prove a miracle?</summary>
+          <p>Historical reasoning cannot repeat the event. It can show that the earliest witnesses truly claimed resurrection and that ordinary explanations carry difficulties. Whether resurrection is possible also depends on whether God exists—and whether God might act in history.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="meaning-title">
+      <div class="closing-inner">
+        <h2 id="meaning-title">If Jesus rose, everything changes.</h2>
+        <p>The resurrection is not only an answer to a historical question. It is God’s declaration that Jesus is Lord, that sin and death have been defeated, and that eternal life is offered as a gift—not earned, achieved, or deserved.</p>
+        <p>The evidence invites a verdict. The gospel explains what that verdict means for you.</p>
+        <a class="cta" href="https://jesuslovestyler.github.io/Gospel-presentation/" target="_blank" rel="noopener noreferrer">Read the Gospel presentation →</a>
+        <p class="scripture">“If you will confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.” <span>Romans 10:9 · World English Bible</span></p>
+      </div>
+    </section>
+
+    <section class="sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">Notes &amp; further reading</h2>
+      <p>These links offer context for the historical claims and also make room for scholarly debate. They are starting points, not substitutes for reading the primary texts.</p>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Tacitus_on_Christ" target="_blank" rel="noopener noreferrer">Tacitus and the Roman attestation to Jesus’s execution</a></li>
+        <li><a href="https://www.degruyterbrill.com/document/doi/10.1515/opth-2025-0051/html" target="_blank" rel="noopener noreferrer">Open-access scholarly discussion of the empty tomb and witness claims</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/1_Corinthians_15" target="_blank" rel="noopener noreferrer">First Corinthians 15, its date, and the early creed</a></li>
+        <li><a href="https://repository.sbts.edu/handle/10392/4857?show=full" target="_blank" rel="noopener noreferrer">Historical evaluation of apostolic martyrdom traditions</a></li>
+        <li><a href="https://gospelstudies.org.uk/theologicalstudies/pdf/hopes-reason/02-1_051.pdf" target="_blank" rel="noopener noreferrer">A journal overview of the minimal-facts argument</a></li>
+      </ul>
+      <p class="translation">Scripture quotations are from the World English Bible, a public-domain translation.</p>
+    </section>
+  </main>
+</body>
+</html>
