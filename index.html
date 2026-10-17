@@ -73,6 +73,28 @@
       text-rendering: optimizeLegibility;
     }
     a { color: inherit; }
+
+    .home-pill {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 50;
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 15px;
+      border: 1px solid var(--line-strong);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--sea);
+      font-family: var(--sans);
+      font-size: .85rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(31, 55, 53, .12);
+      transition: color .2s ease, border-color .2s ease;
+    }
+    .home-pill:hover,
+    .home-pill:focus-visible { color: var(--sun-deep); border-color: var(--sun); }
     img, svg { display: block; max-width: 100%; }
     h1, h2, h3, blockquote { font-family: var(--serif); color: var(--ink); }
 
@@ -476,6 +498,7 @@
   </style>
 </head>
 <body>
+  <a class="home-pill" href="https://jesuslovestyler.com/">⌂ Home</a>
   <main>
     <section class="hero" aria-labelledby="page-title">
       <div class="hero-copy">
@@ -615,7 +638,7 @@
         <h2 id="meaning-title">If Jesus rose, everything changes.</h2>
         <p>The resurrection is not only an answer to a historical question. It is God’s declaration that Jesus is Lord, that sin and death have been defeated, and that eternal life is offered as a gift—not earned, achieved, or deserved.</p>
         <p>The evidence invites a verdict. The gospel explains what that verdict means for you.</p>
-        <a class="cta" href="https://jesuslovestyler.github.io/Gospel-presentation/" target="_blank" rel="noopener noreferrer">Read the Gospel presentation →</a>
+        <a class="cta" href="https://jesuslovestyler.github.io/Gospel-presentation/">Read the Gospel presentation →</a>
         <p class="scripture">“If you will confess with your mouth that Jesus is Lord and believe in your heart that God raised him from the dead, you will be saved.” <span>Romans 10:9 · World English Bible</span></p>
       </div>
     </section>
@@ -624,14 +647,15 @@
       <h2 id="sources-title">Notes &amp; further reading</h2>
       <p>These links offer context for the historical claims and also make room for scholarly debate. They are starting points, not substitutes for reading the primary texts.</p>
       <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Tacitus_on_Christ" target="_blank" rel="noopener noreferrer">Tacitus and the Roman attestation to Jesus’s execution</a></li>
-        <li><a href="https://www.degruyterbrill.com/document/doi/10.1515/opth-2025-0051/html" target="_blank" rel="noopener noreferrer">Open-access scholarly discussion of the empty tomb and witness claims</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/1_Corinthians_15" target="_blank" rel="noopener noreferrer">First Corinthians 15, its date, and the early creed</a></li>
-        <li><a href="https://repository.sbts.edu/handle/10392/4857?show=full" target="_blank" rel="noopener noreferrer">Historical evaluation of apostolic martyrdom traditions</a></li>
-        <li><a href="https://gospelstudies.org.uk/theologicalstudies/pdf/hopes-reason/02-1_051.pdf" target="_blank" rel="noopener noreferrer">A journal overview of the minimal-facts argument</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Tacitus_on_Christ">Tacitus and the Roman attestation to Jesus’s execution</a></li>
+        <li><a href="https://www.degruyterbrill.com/document/doi/10.1515/opth-2025-0051/html">Open-access scholarly discussion of the empty tomb and witness claims</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/1_Corinthians_15">First Corinthians 15, its date, and the early creed</a></li>
+        <li><a href="https://repository.sbts.edu/handle/10392/4857?show=full">Historical evaluation of apostolic martyrdom traditions</a></li>
+        <li><a href="https://gospelstudies.org.uk/theologicalstudies/pdf/hopes-reason/02-1_051.pdf">A journal overview of the minimal-facts argument</a></li>
       </ul>
       <p class="translation">Scripture quotations are from the World English Bible, a public-domain translation.</p>
     </section>
   </main>
+  <script data-goatcounter="https://jesuslovestyler.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
